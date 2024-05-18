@@ -1,0 +1,319 @@
+/* Reset CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #000000; /* Black background */
+    color: #ffffff; /* White text */
+    line-height: 1.6;
+    overflow-x: hidden; /* Prevent horizontal scroll */
+}
+
+nav {
+    background-color: rgb(9, 9, 9); /* Dark gray */
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed; /* Fixed position */
+    width: 100%; /* Full width */
+    z-index: 1000; /* Ensure nav bar is on top */
+}
+
+.logo {
+    font-size: 24px;
+    color: #cc0000; /* Dark red */
+}
+
+.nav-links {
+    list-style-type: none;
+    display: flex;
+}
+
+.nav-links li {
+    margin-right: 20px;
+}
+
+.nav-links li a {
+    text-decoration: none;
+    color: #ffffff;
+    transition: color 0.3s ease;
+}
+
+.nav-links li a:hover {
+    color: #cc0000; /* Dark red */
+}
+
+.hero {
+    height: 100vh; /* Full viewport height */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative; /* Relative position */
+    background-image: url('https://img.freepik.com/free-vector/abstract-black-lines-geometric-background_677411-2748.jpg?size=626&ext=jpg&ga=GA1.1.1224184972.1714089600&semt=ais'); /* Add your background image here */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat; /* Prevent repeating background */
+    background-attachment: fixed; /* Fixed background */
+}
+
+.hero-content {
+    z-index: 1;
+}
+
+.hero h1 {
+    font-size: 48px;
+}
+
+.footer {
+    background-color: #1a1a1a; /* Dark gray */
+    padding: 20px;
+    text-align: center;
+    position: relative; /* Relative position */
+    margin-top: 50px; /* Add margin top */
+    width: 100%; /* Full width */
+    z-index: 1000; /* Ensure footer is on top */
+}
+
+.section {
+    margin: 100px 10%; /* Add 10% padding on left and right */
+    padding: 20px;
+    
+    background-color: #1a1a1a; /* Dark gray */
+    border-radius: 20px; /* Add border-radius */
+    transition: transform 0.3s ease; /* Add transition for hover effect */
+    margin-top: 50px; /* Add margin top */
+}
+
+
+
+
+
+.left, .right {
+    width: 100%; /* Ensure both columns take full width */
+}
+
+
+
+
+.section h2 {
+    color: #cc0000; /* Dark red */
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.section p {
+    color: #ffffff; /* White text */
+}
+
+.skill h3,
+.project h3 {
+    color: #9933ff; /* Dark purple */
+    margin-bottom: 10px;
+}
+
+.content1 {
+    display: flex;
+    flex-direction: row; /* Display content in a row layout */
+    align-items: center; /* Align items vertically */
+}
+
+.left, .right {
+    flex: 1; /* Equal width for both columns */
+}
+
+.right {
+    margin-left: 20px;
+    display: flex;
+    justify-content: end;
+    
+}
+.right img{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+
+}
+
+
+.skills-container,
+.projects-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.skill,
+.project {
+    flex: 0 0 calc(33.33% - 40px);
+    max-width: calc(33.33% - 40px);
+    background-color: #1a1a1a; /* Dark gray */
+    padding: 20px;
+    border-radius: 10px;
+    margin: 20px;
+    border: 2px solid rgba(0,0,0,0.3); /* Dark red border */
+    box-shadow: 0 0 5px rgba(0,0,0,0.3);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: .5s;
+}
+
+.skill:hover{
+    transform: scale(1.1);
+}
+.project:hover{
+    transform: scale(1.1);
+}
+
+.project a{
+    width: 100%;
+    text-align: center;
+    background-color: rgba(0,0,0,0.7);
+    font-size: 30px;
+    text-decoration: none;
+    color: white;
+    
+}
+#p1{
+    background-image: url(socify.png);
+    background-size: cover;
+    height: 200px;
+    width: 200px;
+}
+#p2{
+    background-image: url(codex.png);
+    background-size: cover;
+    height: 200px;
+    width: 200px;
+}
+#p3{
+    background-image: url(clock.png);
+    background-size: cover;
+    height: 200px;
+    width: 200px;
+}
+.skill .i{
+    font-size: 100px;
+    
+}
+
+.ii{
+    font-size: 50px;
+}
+/* Add hover effect */
+.section:hover {
+    transform: translateY(-10px); 
+    box-shadow: 5px 5px 10px rgba(204, 0, 0, 0.5);/* Move section up by 10px on hover */
+}
+.icons{
+    display: flex;
+    justify-content: space-evenly;
+    
+}
+
+.icons a {
+    transition: .3s;
+    font-size: 60px;
+    color: white;
+}
+
+.icons a:hover{
+    transform: scale(1.5);
+    color: #cc0000;
+}
+
+/* Add animation for typing effect */
+@keyframes typing {
+    from { width: 0; }
+    to { width: 100%; }
+}
+
+/* Add animation for deleting effect */
+@keyframes deleting {
+    from { width: 100%; }
+    to { width: 0; }
+}
+
+/* Apply animation to text */
+#developer-text {
+    overflow: hidden;
+    white-space: nowrap;
+    margin-top: 20px;
+    color: white; /* Text color */
+    font-size: 24px; /* Text size */
+}
+
+#job-title {
+    color: white;
+}
+
+
+.typing {
+    animation: typing 2s steps(20, end), blink-caret 0.5s step-end infinite alternate;
+}
+
+.deleting {
+    animation: deleting 2s steps(20, end), blink-caret 0.5s step-end infinite alternate;
+}
+
+/* Add cursor blinking animation */
+@keyframes blink-caret {
+    from, to { border-color: transparent; }
+    50% { border-color: white; }
+}
+
+
+@media (max-width: 768px) {
+ .logo{
+    font-size: 20px;
+ }
+ .nav-links{
+    flex-direction: column;
+ }
+ .hero{
+    background: none;
+ }
+ .hero-content{
+    margin: 20px;
+    
+ }
+ .skills-container{
+   display: grid;
+   grid-template-columns: auto;
+ }
+ .skill,
+ .project{
+    max-width: 200px;
+ }
+ .skill .i{
+   display: none;
+ }
+ .skill .ii{
+    display: none;
+ }
+ .skill h3,
+ .project h3{
+    font-size: small;
+ }
+
+ .projects-container{
+    display: grid;
+    grid-template-columns: auto;
+ }
+ 
+ .section .content1{
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+    
+ }
+ .right{
+    display: flex;
+    justify-content: center;
+ }
+}
